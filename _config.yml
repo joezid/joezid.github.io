@@ -1,0 +1,37 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: rouge
+markdown: kramdown
+google_analytics: UA-161603323-1
+title: joezid
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: HOME
+
+description: Stylish Jekyll Theme
+author:
+  name: joezid
+  email: yossefzidan2014@gmail.com
+  github: joezid
+  twitter: yossefzidann
+  linkedin: joezid
+  bio: An infosec blog which contain CTF-Writeups & Malware Analysis reports
+  email_md5: 726351295ec82e145928582f595aa3aa
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+# set it as url of an image
+# sidebar_background_image: https://github.com/joezid/joezid.github.io/raw/master/assets/ico/avatar.jpg
+BASE_PATH:
+
+plugins:
+  - jekyll-paginate
