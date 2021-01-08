@@ -22,7 +22,7 @@ This is the easiest way to check if the sample we are working with is packed usi
 
 **2- Number Of Imports:**
 
-Low number of imports can be an indicator of packing,But we can't be sure as maybe the malware author is using dynamic api resolving to resolve all the imports during the runtime.
+Low number of imports can be an indicator of packing,But we can't be sure as maybe the malware author is using dynamic import resolving to resolve all the imports during the runtime.
 
 `Unpacked Sample Imports`
 
@@ -31,3 +31,5 @@ Low number of imports can be an indicator of packing,But we can't be sure as may
 `Packed Sample Imports`
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/pac_imp.PNG)
+
+
