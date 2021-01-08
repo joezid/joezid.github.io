@@ -14,6 +14,6 @@ From the image above we can understand the mechanism of how regular packers work
 
 # Packing Detection
 
-```
-Signature Based Detection
-```
+**1- Signature Based Detection:**
+
+
