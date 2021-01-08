@@ -14,13 +14,13 @@ From the image above we can understand the mechanism of how regular packers work
 
 # Packing Detection
 
-**1- Signature Based Detection:**
+***1- Signature Based Detection:***
 
 This is the easiest way to check if the sample we are working with is packed using any common packer and this can be done using tools like `Exeinfo` , `Detect-It-Easy` or `Peid`. Usually, we will check the sample with more than one tool as each one of them may be using different signatures.
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/screenshot.jpg)
 
-**2- Number Of Imports:**
+***2- Number Of Imports:***
 
 Low number of imports can be an indicator of packing,But we can't be sure as maybe the malware author is using dynamic import resolving to resolve all the imports during the runtime.
 
@@ -32,7 +32,7 @@ Low number of imports can be an indicator of packing,But we can't be sure as may
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/pac_imp.PNG)
 
-**3- Entropy Analysis:**
+***3- Entropy Analysis:***
 
 Shannon entropy can be a good indicator for detecting the use of packing, compression, and encryption in a file, The returned value will be between 0-8.
 If the returned value is high this can be an indicator that the sample is packed.
