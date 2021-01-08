@@ -32,4 +32,17 @@ Low number of imports can be an indicator of packing,But we can't be sure as may
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/pac_imp.PNG)
 
+**3- Entropy Analysis:**
+
+Shannon entropy can be a good indicator for detecting the use of packing, compression, and encryption in a file, The returned value will be between 0-8.
+If the returned value is high this can be an indicator that the sample is packed.
+
+`Unpacked Sample Entropy`
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/unpac_entr.PNG)
+
+`Packed Sample Entropy`
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/pac_entr.PNG)
+
 
