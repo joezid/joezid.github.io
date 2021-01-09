@@ -59,8 +59,7 @@ This is considred the basics steps you should know to be able to unpack the basi
 
 # Generic Unpacking
 
-Malware authors always try to hide and evade detection not just by packing the code but also by using different injection techniques like `Self Injection` , `PE Injection` ,   
-`Process Hollowing` ,...etc.
+Malware authors always try to hide and evade detection not just by packing the code but also by using different injection techniques like `Self Injection` , `PE Injection` , `Process Hollowing` ,...etc.
 
 Each technique of the injections we talked about requires a set of API calls to be achieved, So for now we will talk about three APIs we can set a breakpoint on them and watch the parameters passed or the return value until we talk in details about each technique.
 
