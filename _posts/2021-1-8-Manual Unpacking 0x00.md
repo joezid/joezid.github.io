@@ -61,7 +61,7 @@ This is considred the basics steps you should know to be able to unpack the basi
 
 Malware authors always try to hide and evade detection not just by packing the code but also by using different injection techniques like `Self Injection` , `PE Injection` , `Process Hollowing` ,...etc.
 
-Each technique of the injections we talked about requires a set of API calls to be achieved, So for now we will talk about three APIs we can set a breakpoint on them and watch the parameters passed or the return value until we talk in details about each technique.
+Each technique of the injections we talked about requires a set of API calls to be achieved, So by monitoring the APIs calls made by the executable we can predict the technique used and the functionality of the sample, But for now we will talk about three APIs we can set a breakpoint on them and watch the parameters passed or the return value until we talk in details about each technique.
 
 1- `VirtualAlloc` : This function is a memory-allocation routine that can allocate memory in a current process or in a remote process if using `VirtualAllocEx`, So for sure it will be useful to see if the malware is allocating memory as maybe the unpacked pe file will be written to the allocated memory or a shellcode will be written there.
 
