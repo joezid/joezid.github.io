@@ -45,4 +45,10 @@ If the returned value is high this can be an indicator that the sample is packed
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/pac_entr.PNG)
 
+# Unpacking Steps
+
+1- The first step is to identify the OEP,As we saw before at some point the decporession or the decryption will be finished and the execution will be continue from the OEP.
+2- Execute the sample until we arrive to the OEP,Which will allow the sample to unpack it self.
+3- Dump the unpacked process from memory.
+4- Fix the import address table `IAT` of the dumped file.
 
