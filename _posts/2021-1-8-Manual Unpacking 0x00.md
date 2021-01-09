@@ -55,3 +55,11 @@ If the returned value is high this can be an indicator that the sample is packed
 
 4- Fix the import address table `IAT` of the dumped file.
 
+This is considred the basics steps you should know to be able to unpack the basics packers,But in most cases it will be hard to follow and understand the full unpacking routine so we move to the generic unpacking to save our time if we don't have to fully analyze the unpacking routine.
+
+# Generic Unpacking
+
+Malware authors always try to hide and evade detection not just by packing the code but also by using diffrenet injection techniques like `self injection` , `PE injection` ...etc .
+
+
+
