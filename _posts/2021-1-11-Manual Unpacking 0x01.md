@@ -15,4 +15,4 @@ We will mainly use three tools beside the regular tools we use regulary:
 
 2- [Scylla](https://github.com/NtQuery/Scylla): Will be used to dump unpacked process and fix the import table.
 
-3- [Tiny Tracer](https://github.com/hasherezade/tiny_tracer): Will be used to trace API calls and trace transition between sections of the traced module (helpful in finding OEP of the packed module)
+3- [Tiny Tracer](https://github.com/hasherezade/tiny_tracer): Will be used to trace API calls and trace transition between sections(helpful in finding OEP of the packed module).
