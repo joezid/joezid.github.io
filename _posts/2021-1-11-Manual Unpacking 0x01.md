@@ -74,6 +74,29 @@ After the termination of the process you will find a file generated with the ext
 14956;CPUID:1
 14a2a;CPUID:7
 ```
+Checking the genrated tag file we can notice a transation happen from `UPX0` section to the section `UPX1` and our `OEP` will be at the RVA `0x11136` ,So let's load the executable in x64 dbg.
 
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/bas.png)
+
+As the executable is loaded at the base address `0x400000` so our `OEP` will be at the address `0x411136`.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/add.png)
+
+Now go to the address `0x411136` and set a hardware breakpoint on execution on this address and run the executable till the breakpoint is hit.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/unp_1.PNG)
+
+As we can notice our breakpoint is hitted and the code at this address is changed too,So let's use `Scylla` to dump the unpacked data and fix the import address table.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/dump_1.png)
+
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/dump_3.png)
+
+Now you can start analyzing the unpacked sample as every thing is fine now.
+So let's move to the second technique we will discuss :D.
+
+***2- Inject the unpacked payload to allocated memory:***
 
 
