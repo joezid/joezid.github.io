@@ -102,4 +102,4 @@ So let's move to the second technique we will discuss :D
 
 ***2- Inject the unpacked payload to allocated memory:***
 
-
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/Self_1.gif)
