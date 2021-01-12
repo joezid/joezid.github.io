@@ -97,7 +97,7 @@ As we can notice our breakpoint is hitted and the code at this address is change
 Now you can start analyzing the unpacked sample as every thing is fine now.
 
 ```
-So let's move to the second technique we will discuss :D.
+So let's move to the second technique we will discuss :D
 ```
 
 ***2- Inject the unpacked payload to allocated memory:***
