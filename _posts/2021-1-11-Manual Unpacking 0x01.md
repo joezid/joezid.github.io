@@ -35,3 +35,45 @@ Now let's see how we can unpack any sample that uses the section overwrite techn
 
 3- Dump the unpacked section and fix the import table.
 
+Now let's unpack a sample packed by `UPX`.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/up.PNG)
+
+If you check the sections of any `UPX` packed sample you will notice that the section `UPX0` have a 0 raw size but at the same time have a large value when the executable is mapped into memory,So we can start guessing that the unpacked payload will be written to this section.
+
+Now let's run `tiny tracer` and see where the section transition is done.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/rn_p.png)
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/p_2.PNG)
+
+```
+Note: Leave the sample runinig for 30 seconds or 1 minute then terminate it.
+```
+After the termination of the process you will find a file generated with the extension `.tag` which contain all the api calls used by the traced sample,So let's check it.
+
+```
+215ef;kernel32.LoadLibraryA
+21604;kernel32.GetProcAddress
+21604;kernel32.GetProcAddress
+21604;kernel32.GetProcAddress
+21604;kernel32.GetProcAddress
+21604;kernel32.GetProcAddress
+21604;kernel32.GetProcAddress
+21604;kernel32.GetProcAddress
+21663;kernel32.VirtualProtect
+21678;kernel32.VirtualProtect
+216bd;[UPX1] -> [UPX0]
+11136;section: [UPX0] ---> Our OEP
+13792;kernel32.GetSystemTimeAsFileTime
+137a7;kernel32.GetCurrentThreadId
+137b3;kernel32.GetCurrentProcessId
+137c3;kernel32.QueryPerformanceCounter
+14dce;kernel32.IsProcessorFeaturePresent
+148e0;CPUID:0
+14956;CPUID:1
+14a2a;CPUID:7
+```
+
+
+
