@@ -13,10 +13,15 @@ We will mainly use three tools beside the tools we use regulary:
 
 1- [x64 dbg](https://x64dbg.com/): No need for description as you all probley know.
 
-2- [Scylla](https://github.com/NtQuery/Scylla): Will be used to dump unpacked process and fix the import table.
+2- [Scylla](https://github.com/NtQuery/Scylla): Will be used to dump unpacked process and reconstruct the import table.
 
 3- [Tiny Tracer](https://github.com/hasherezade/tiny_tracer): Will be used to trace API calls and trace transition between sections(helpful in finding OEP of the packed module).
 
 # Injection Techniques
-We have two common techniques which usually used here the first one is injecting the unpacked code to allocated memory and the second one is unpack the payload then overwrite one of the section of the pe file.
+We have two common techniques which usually used here the first one is injecting the unpacked code to allocated memory and the second one is unpack the payload then overwrite one of the sections of the pe file.
+
+***1- Section Overwrite:***
+
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/packing_dia2.png)
 
