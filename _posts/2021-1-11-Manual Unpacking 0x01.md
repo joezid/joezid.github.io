@@ -130,7 +130,50 @@ We will start by adding some breakpoints and see if any of them is hitted:
 > Usually when we try to unpack a malware and we don't know the technique used in it we will add more breakpoints but for now let's focus on these two.
 
 
-![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/bp_vir.png)
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/bp_vir.PNG)
+
+And also add a breakpoint to `VirtualProtect`,Then let the sample continue execution.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/vir_vp.PNG)
+
+We hit our breakpoint at `VirtualProtect`,We can check the passed paramters but still didn't find anything intersted so we can continue.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/alloc.PNG)
+
+We hitted our breakpoint on `VirtualAlloc` and as we know the address of the allocated memory will be in `EAX` register at the return ,So press `Execute Till Return`.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/alloc_2.PNG)
+
+Now right click on the `EAX` register and choose follow in dump to monitor the changes and continue the execution.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/vp_2.PNG)
+
+Now we hit `VirtualProtect` For second time but the important thing here that we see a PE file header in the allocated memory so let's dump this memory regoing, Click on the allocated memory and choose follow in memory map.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/dmp.png)
+
+Now dump the memory and save it ,Then let's check the PE file using PEBear.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/bp_e.PNG)
+
+Every thing looks find and the pe file seems not corrupted,So now we can load the unpacked executable to IDA and start the analysis.
+
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/rev_fin.PNG)
+
+We see some intersting stuff in the executable but we will leave it for later.
+
+# Samples
+
+REvil: [Download Link 1](https://app.any.run/tasks/e163502e-3334-46d9-aeb7-e5c925b64af7/)
+       [Download Link 2](https://malshare.com/sample.php?action=detail&hash=61c19e7ce627da9b5004371f867a47d3)       
+
+# IOCS
+
+Packed REvil:   `bf7114f025fff7dbc6b7aff8e4edb0dd8a7b53c3766429a3c5f10142609968f9`
+Unpacked REvil: `5f56d5748940e4039053f85978074bde16d64bd5ba97f6f0026ba8172cb29e93`
+
+
+
 
 
 
