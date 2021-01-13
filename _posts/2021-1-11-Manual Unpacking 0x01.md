@@ -130,7 +130,7 @@ We will start by adding some breakpoints and see if any of them is hitted:
 > Usually when we try to unpack a malware and we don't know the technique used in it we will add more breakpoints but for now let's focus on these two.
 
 
-
+![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/bp_vir.png)
 
 
 
