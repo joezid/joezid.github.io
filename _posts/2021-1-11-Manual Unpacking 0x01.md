@@ -164,9 +164,8 @@ We see some intersting stuff in the executable but we will leave it for later.
 
 # Samples
 
-REvil: [Download Link 1](https://app.any.run/tasks/e163502e-3334-46d9-aeb7-e5c925b64af7/)
-
-       [Download Link 2](https://malshare.com/sample.php?action=detail&hash=61c19e7ce627da9b5004371f867a47d3)       
+REvil: [Download-Link-1](https://app.any.run/tasks/e163502e-3334-46d9-aeb7-e5c925b64af7/)
+       [Download-Link-2](https://malshare.com/sample.php?action=detail&hash=61c19e7ce627da9b5004371f867a47d3)       
 
 # IOCS
 
