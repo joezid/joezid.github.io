@@ -47,9 +47,9 @@ Now let's run `tiny tracer` and see where the section transition is done.
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/p_2.PNG)
 
-```
-Note: Leave the sample runinig for 30 seconds or 1 minute then terminate it.
-```
+
+> Note: Leave the sample runinig for 30 seconds or 1 minute then terminate it.
+
 After the termination of the process you will find a file generated with the extension `.tag` which contain all the api calls used by the traced sample,So let's check it.
 
 ```
@@ -94,11 +94,11 @@ As we can notice our breakpoint is hitted and the code at this address is change
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/dump_3.png)
 
-Now you can start analyzing the unpacked sample as every thing is fine now.
+Now you can start analyzing the unpacked sample.
 
-```
-So let's move to the second technique we will discuss :D
-```
+
+> So let's move to the second technique we will discuss :D
+
 
 ### 2- Inject the unpacked payload to allocated memory:
 
