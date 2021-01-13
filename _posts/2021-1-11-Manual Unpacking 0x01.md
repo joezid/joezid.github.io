@@ -20,7 +20,7 @@ We will mainly use three tools beside the tools we use regulary:
 # Injection Techniques
 We have two common techniques which usually used here the first one is injecting the unpacked code to allocated memory and the second one is unpack the payload then overwrite one of the sections of the pe file.
 
-***1- Section Overwrite:***
+### 1- Section Overwrite:
 
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/packing_dia2.png)
@@ -100,6 +100,6 @@ Now you can start analyzing the unpacked sample as every thing is fine now.
 So let's move to the second technique we will discuss :D
 ```
 
-***2- Inject the unpacked payload to allocated memory:***
+### 2- Inject the unpacked payload to allocated memory:
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/vir.gif)
