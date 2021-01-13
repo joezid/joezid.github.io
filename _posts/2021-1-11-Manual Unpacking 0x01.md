@@ -100,6 +100,23 @@ Now you can start analyzing the unpacked sample.
 > So let's move to the second technique we will discuss :D
 
 
-### 2- Inject the unpacked payload to allocated memory:
+### 2- Inject the unpacked payload to the allocated memory:
+
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/vir.gif)
+
+
+Usually when any malware use this technique it will do the following steps:
+
+1- Allocate regoin of memory using one of `VirtualAlloc`,`LocalAlloc` ...etc.
+
+2- Unpack the packed payload.
+
+3- Write the unpacked payload to the allocated memory.
+
+4- Change the protection of the allocated memory to be able to execute code on it using `VirtualProtect`. 
+
+5- Jump to the entry point of the unpacked payload in the allocated memory.
+
+
+
