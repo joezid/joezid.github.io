@@ -148,7 +148,7 @@ Now right click on the `EAX` register and choose follow in dump to monitor the c
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/vp_2.PNG)
 
-Now we hit `VirtualProtect` For second time but the important thing here that we see a PE file header in the allocated memory so let's dump this memory regoing, Click on the allocated memory and choose follow in memory map.
+Now we hit `VirtualProtect` For second time but the important thing here that we see a PE file header in the allocated memory so let's dump this memory region, Click on the allocated memory and choose follow in memory map.
 
 ![Image](https://github.com/joezid/joezid.github.io/raw/main/Images/Manual%20unpacking/dmp.png)
 
