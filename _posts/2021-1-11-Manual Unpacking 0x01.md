@@ -118,5 +118,22 @@ Usually when any malware use this technique it will do the following steps:
 
 5- Jump to the entry point of the unpacked payload in the allocated memory.
 
+To unpack any sample that uses this technique we can simply set a breakpoint on the return of the API used to allocate memory as the return value will be the address of the allocated memory and watch the changes that happens to the allocated memory.
+
+So let's try to unpack a sample that usese this technique.
+
+We will start by adding some breakpoints and see if any of them is hitted:
+
+1- Break point on `VirtualAlloc` .
+2- Break point on `VirtuaProtect` .
+
+> Usually when we try to unpack a malware and we don't know the technique used in it we will add more breakpoints but for now let's focus on these two.
+
+
+
+
+
+
+
 
 
